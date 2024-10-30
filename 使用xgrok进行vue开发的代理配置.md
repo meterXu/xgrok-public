@@ -9,11 +9,18 @@
 
 禁用host检查
 ```javascript
+// vue_cli v4
 module.exports = {
     devServer: {
         disableHostCheck: true,
-        host:'0.0.0.0',
-        allowedHosts: 'all'
+        host:'0.0.0.0'
+    }
+}
+// vue_cli v5 
+module.exports = {
+    devServer: {
+        allowedHosts: 'all',
+        host:'0.0.0.0'
     }
 }
 ```
