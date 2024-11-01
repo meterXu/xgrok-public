@@ -4,6 +4,8 @@
 
 本教程就是告诉你，如何通过xgrok代理本地的vue开发服务，并在移动终端上查看效果。
 
+[点我下载xgrok](https://www.xdo.icu)
+
 ## 步骤
 1. 修改vue.config.js配置
 
@@ -23,6 +25,14 @@ module.exports = {
         host:'0.0.0.0'
     }
 }
+
+// vite
+export default defineConfig({
+    server:{
+        allowedHosts: 'all',
+        host: true
+    }
+})
 ```
 
 2. 在xgrok中添加网页穿透
@@ -41,3 +51,4 @@ WEB端口：填写vue默认开发端口8080
 
 ![添加网页穿透](assets/使用xgrok进行vue开发的代理配置/访问代理出来的地址.png)
 
+![手机访问代理后的网页.jpg](assets/使用xgrok进行vue开发的代理配置/手机访问代理后的网页.jpg)
